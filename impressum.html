@@ -3,162 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impressum · Kat — Coach, Mediator & Facilitator · Berlin</title>
+<title>Impressum · Kateryna Grodska</title>
 <meta name="description" content="Impressum / Legal Notice – Kateryna Grodska, Coaching, Mediation & Facilitation, Berlin.">
 <meta name="robots" content="noindex, follow">
+<meta property="og:title" content="Impressum · Kateryna Grodska">
+<meta property="og:description" content="Impressum / Legal Notice – Kateryna Grodska, Coaching, Mediation & Facilitation, Berlin.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F8F3EE">
 <link rel="stylesheet" href="fonts/fonts.css">
-
-<style>
-  :root {
-    --cream:    #F8F3EE;
-    --cream-2:  #EDE6DC;
-    --border:   #D8CFC6;
-    --text:     #2C2420;
-    --muted:    #7A6E68;
-    --accent:   #B8733A;
-    --accent-d: #9A5E28;
-    --white:    #FDFAF7;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.75;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* ── NAV (same look as home page) ── */
-  nav {
-    background: rgba(248,243,238,0.92);
-    border-bottom: 0.5px solid var(--border);
-  }
-  .nav-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 28px;
-    height: 62px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    color: var(--text);
-    text-decoration: none;
-  }
-  .nav-back {
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .nav-back:hover { color: var(--text); }
-
-  /* ── CONTENT ── */
-  main {
-    flex: 1;
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 80px 28px 96px;
-  }
-  .section-label {
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 16px;
-  }
-  h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 1.1;
-    margin-bottom: 8px;
-  }
-  .subtitle { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
-
-  .card {
-    background: var(--white);
-    border: 0.5px solid var(--border);
-    border-radius: 2px;
-    padding: 36px 40px;
-  }
-  h2 {
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 28px 0 6px;
-  }
-  .card > h2:first-child { margin-top: 0; }
-  .card p { font-size: 15px; }
-  .card a { color: var(--accent-d); text-decoration: none; border-bottom: 0.5px solid rgba(184,115,58,0.4); }
-  .card a:hover { color: var(--accent); }
-
-  .divider {
-    border: none;
-    border-top: 0.5px solid var(--border);
-    margin: 72px 0 56px;
-  }
-  .en h1 { font-size: 38px; }
-
-  /* ── FOOTER (same look as home page) ── */
-  footer {
-    background: var(--text);
-    color: rgba(255,255,255,0.5);
-    padding: 28px 0;
-    font-size: 11px;
-  }
-  .footer-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-  }
-  footer nav { background: none; border: none; display: flex; gap: 24px; }
-  footer a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 12px; transition: color 0.2s; }
-  footer a:hover { color: rgba(255,255,255,0.9); }
-
-  @media (max-width: 600px) {
-    main { padding: 48px 20px 72px; }
-    h1 { font-size: 40px; }
-    .en h1 { font-size: 32px; }
-    .card { padding: 28px 22px; }
-    .footer-inner { flex-direction: column; text-align: center; }
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
-<nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav">
   <div class="nav-inner">
-    <a href="./" class="logo">KAT</a>
-    <a href="./" class="nav-back">← Back to home</a>
+    <a href="index.html" class="logo" aria-label="Kat, home">KAT</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About</a></li><li><a href="coaching.html">1:1 Coaching</a></li><li><a href="mediation.html">Mediation</a></li><li><a href="workshops.html">Team workshops</a></li><li><a href="community.html">Community</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="faq.html">FAQ</a></li><li><a class="nav-cta" href="contact.html#book">Book a session</a></li>
+    </ul>
   </div>
-</nav>
-
-<main>
-  <p class="section-label">Rechtliches</p>
+</header>
+<main id="main">
+<div class="legal-wrap">
+  <p class="eyebrow">Rechtliches</p>
   <h1>Impressum</h1>
   <p class="subtitle">Angaben gemäß § 5 DDG</p>
 
-  <section class="card">
+  <section class="legal-card">
     <h2>Anbieterin</h2>
     <p>
       Kateryna Grodska<br>
@@ -187,14 +60,14 @@
     </p>
   </section>
 
-  <hr class="divider">
+  <hr class="legal-divider">
 
-  <div class="en" lang="en">
-    <p class="section-label">Legal</p>
+  <div class="legal-en" lang="en">
+    <p class="eyebrow">Legal</p>
     <h1>Legal Notice</h1>
     <p class="subtitle">Information pursuant to § 5 DDG (German Digital Services Act)</p>
 
-    <section class="card">
+    <section class="legal-card">
       <h2>Provider</h2>
       <p>
         Kateryna Grodska<br>
@@ -222,17 +95,41 @@
       </p>
     </section>
   </div>
+</div>
 </main>
-
-<footer>
-  <div class="footer-inner">
-    <span>© 2026 Kateryna Grodska. All rights reserved.</span>
-    <nav>
-      <a href="./">Home</a>
-      <a href="impressum.html">Impressum</a>
-    </nav>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">KAT</a>
+        <p>Kateryna Grodska. Coach, mediator, facilitator. Based in Berlin, online with people worldwide.</p>
+      </div>
+      <div>
+        <h4>Work with me</h4>
+        <a href="coaching.html">1:1 Coaching</a>
+        <a href="mediation.html">Mediation</a>
+        <a href="workshops.html">Team workshops</a>
+        <a href="community.html">Community</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="about.html">About</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <a href="https://www.instagram.com/grodska_coaching/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:kgrodska@gmail.com">Email</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kateryna Grodska. All rights reserved.</span>
+    </div>
   </div>
 </footer>
-
+<script src="site.js"></script>
 </body>
 </html>
