@@ -2,8 +2,8 @@
   'use strict';
 
   /* ── CONFIG: the only place to edit when real links exist ─────────────
-     booking.strategic  → Calendly link for the free strategic session (coaching)
-     booking.mediation  → Calendly link for the free 30-minute mediation intro call
+     booking.strategic  → Cal.com link for the free strategic session (coaching)
+     booking.mediation  → Cal.com link for the free 30-minute mediation intro call
      formEndpoint       → e.g. a Formspree URL. Empty = form opens the visitor's email app.
      Leave a value empty and the button falls back to writing an email. */
   var CONFIG = {
@@ -81,6 +81,9 @@
     var status = $('.form-status', form);
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      /* honeypot: real visitors never see this field; bots fill it. Pretend success, send nothing. */
+      var trap = $('#website', form);
+      if (trap && trap.value) { status.textContent = 'Thank you. Your message is on its way.'; return; }
       var d = {
         name: $('#name', form).value.trim(),
         email: $('#email', form).value.trim(),
