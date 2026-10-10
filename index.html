@@ -16,7 +16,7 @@
 <link rel="icon" href="images/favicon-64.png" sizes="64x64" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=10">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -44,12 +44,10 @@
       </div>
       <div class="photo-wrap reveal" style="transition-delay:.12s">
         <div class="photo-frame">
-          <div class="photo-ph">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            <span>Photo</span>
-          </div>
-          <!-- Drop Kat's photo at images/kat.jpg. It replaces the placeholder automatically. -->
-          <img src="images/kat.jpg" alt="Kateryna Grodska" width="760" height="950" onerror="this.remove()">
+          <picture>
+            <source type="image/webp" srcset="images/kat-600.webp 600w, images/kat-940.webp 940w" sizes="(max-width: 860px) 300px, (max-width: 1280px) 34vw, 420px">
+            <img src="images/kat-940.jpg" alt="Kateryna Grodska, smiling, seated in an armchair at home" width="940" height="1252" fetchpriority="high" decoding="async">
+          </picture>
         </div>
         <div class="photo-tag">Berlin · online worldwide</div>
       </div>
