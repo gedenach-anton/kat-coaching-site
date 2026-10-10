@@ -4,10 +4,15 @@
   /* ── CONFIG: the only place to edit when real links exist ─────────────
      booking.strategic  → Cal.com link for the free strategic session (coaching)
      booking.mediation  → Cal.com link for the free 30-minute mediation intro call
+     booking.quick      → Cal.com link for the free 20-minute quick call
      formEndpoint       → e.g. a Formspree URL. Empty = form opens the visitor's email app.
      Leave a value empty and the button falls back to writing an email. */
   var CONFIG = {
-    booking: { strategic: '', mediation: '' },
+    booking: {
+      strategic: 'https://cal.com/grodska/60min',
+      mediation: 'https://cal.com/grodska/30min',
+      quick: 'https://cal.com/grodska/quick-call'
+    },
     formEndpoint: '',
     email: 'kgrodska@gmail.com'
   };
