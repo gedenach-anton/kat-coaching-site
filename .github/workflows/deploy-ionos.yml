@@ -1,0 +1,65 @@
+name: Deploy to IONOS
+
+# Uploads the site to the IONOS web space over SFTP on every push to main.
+# Needs three repository secrets: SFTP_HOST, SFTP_USER, SFTP_PASSWORD.
+# Without them the job skips the upload and shows a warning.
+# Optional repository variable SFTP_REMOTE_DIR: target folder (default "/").
+#
+# Note: the host key is accepted on first contact (no pinning). Fine for a
+# public static site; pin the key if this ever carries anything sensitive.
+# Only new and changed files are uploaded. Files removed from the repo are
+# NOT removed on the server (no --delete), so nothing else in the web space
+# can be wiped by accident.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-ionos
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SFTP_HOST: ${{ secrets.SFTP_HOST }}
+      SFTP_USER: ${{ secrets.SFTP_USER }}
+      SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+      REMOTE_DIR: ${{ vars.SFTP_REMOTE_DIR || '/' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check secrets
+        id: check
+        run: |
+          if [ -z "$SFTP_HOST" ] || [ -z "$SFTP_USER" ] || [ -z "$SFTP_PASSWORD" ]; then
+            echo "::warning::SFTP secrets are missing. Upload skipped."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install lftp
+        if: steps.check.outputs.ready == 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Upload site
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          # Leave out git data, workflows, notes and Word files: not part of the website.
+          lftp -u "$SFTP_USER","$SFTP_PASSWORD" -p 22 "sftp://$SFTP_HOST" <<EOF
+          set cmd:fail-exit yes
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:reconnect-interval-base 5
+          set net:timeout 20
+          mirror -R --verbose --no-perms --parallel=2 \
+            -x '^\.git' -x '\.md\$' -x '\.docx\$' \
+            . "$REMOTE_DIR"
+          bye
+          EOF
