@@ -1,0 +1,19 @@
+# Served by IONOS (Apache). Lives in the folder the domain points to.
+
+Options -Indexes
+
+# Always use https://grodska.com (no http, no www)
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !=443 [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://grodska.com/$1 [R=301,L]
+
+# Own 404 page
+ErrorDocument 404 /404.html
+
+# Basic security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
