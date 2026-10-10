@@ -211,7 +211,7 @@ a { color: inherit; }
 .form { max-width: 640px; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .field { margin-bottom: 22px; }
-.field label { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-d); margin-bottom: 8px; font-weight: 500; }
+.field label { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-dd); margin-bottom: 8px; font-weight: 500; }
 .field input, .field textarea, .field select { width: 100%; background: var(--white); border: 0.5px solid var(--muted); border-radius: 1px; padding: 13px 14px; font: inherit; font-size: 16px; color: var(--text); }
 .field textarea { min-height: 150px; resize: vertical; line-height: 1.6; }
 .field input:focus, .field textarea:focus, .field select:focus { outline: 2px solid var(--accent-d); outline-offset: 1px; }
@@ -239,7 +239,7 @@ a { color: inherit; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
 .footer-brand .logo { color: rgba(255,255,255,0.92); display: inline-block; margin-bottom: 14px; }
 .footer-brand p { font-size: 13px; line-height: 1.8; max-width: 22em; }
-.site-footer h4 { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; font-weight: 500; }
+.site-footer .fh { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; font-weight: 500; }
 .site-footer a { display: block; font-size: 14px; color: rgba(255,255,255,0.72); text-decoration: none; margin-bottom: 9px; transition: color .2s; width: fit-content; }
 .site-footer a:hover { color: #fff; }
 .footer-bottom { border-top: 0.5px solid rgba(255,255,255,0.14); padding-top: 24px; font-size: 12px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
@@ -290,3 +290,23 @@ a { color: inherit; }
 .footer-brand .logo img { height: 56px; }
 
 .book-card.wide { grid-column: 1 / -1; }
+
+/* eyebrow contrast on tinted sections */
+.tint .eyebrow, .section.tint .eyebrow { color: var(--accent-dd); }
+.book-note { margin-top: 22px; }
+.book-note a, .policy-note a { color: var(--accent-dd); }
+/* privacy policy pages */
+.legal-wrap .subtitle a { color: var(--accent-dd); }
+.policy-note { font-size: 14px; color: var(--muted); margin: -24px 0 32px; }
+.policy-toc { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 24px 28px; margin-bottom: 28px; }
+.policy-toc-h { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.policy-toc ol { list-style: none; columns: 2; column-gap: 32px; }
+.policy-toc li { font-size: 14px; line-height: 1.5; padding: 3px 0; break-inside: avoid; }
+.policy-toc a { color: var(--text); text-decoration: none; }
+.policy-toc a:hover { color: var(--accent-d); }
+.legal-card.policy h2 { font-family: var(--serif); font-size: 26px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--text); margin: 44px 0 12px; line-height: 1.2; }
+.legal-card.policy h2:first-child { margin-top: 0; }
+.legal-card.policy p { font-size: 15px; line-height: 1.8; margin-bottom: 14px; }
+.legal-card.policy ul { padding-left: 20px; margin-bottom: 14px; }
+.legal-card.policy li { font-size: 15px; line-height: 1.8; margin-bottom: 6px; }
+@media (max-width: 640px) { .policy-toc ol { columns: 1; } .legal-card.policy h2 { font-size: 23px; } .policy-note { margin-top: -16px; } }

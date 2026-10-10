@@ -6,6 +6,8 @@
      booking.mediation  → Cal.com link for the free 30-minute mediation intro call
      booking.quick      → Cal.com link for the free 20-minute quick call
      formEndpoint       → e.g. a Formspree URL. Empty = form opens the visitor's email app.
+                          IMPORTANT: setting this sends form data to a third party. The privacy policy
+                          (datenschutz.html / privacy.html, section 5) must be updated first.
      Leave a value empty and the button falls back to writing an email. */
   var CONFIG = {
     booking: {
@@ -14,7 +16,7 @@
       quick: 'https://cal.com/grodska/quick-call'
     },
     formEndpoint: '',
-    email: 'kgrodska@gmail.com'
+    email: 'info@grodska.com'
   };
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
