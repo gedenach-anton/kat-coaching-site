@@ -3,7 +3,7 @@ name: Deploy to IONOS
 # Uploads the site to the IONOS web space over SFTP on every push to main.
 # Needs three repository secrets: SFTP_HOST, SFTP_USER, SFTP_PASSWORD.
 # Without them the job skips the upload and shows a warning.
-# Optional repository variable SFTP_REMOTE_DIR: target folder (default "/").
+# Optional repository variable SFTP_REMOTE_DIR: target folder (default "/grodska.com": IONOS cannot connect a domain to the root folder).
 #
 # Note: the host key is accepted on first contact (no pinning). Fine for a
 # public static site; pin the key if this ever carries anything sensitive.
@@ -30,7 +30,7 @@ jobs:
       SFTP_HOST: ${{ secrets.SFTP_HOST }}
       SFTP_USER: ${{ secrets.SFTP_USER }}
       SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
-      REMOTE_DIR: ${{ vars.SFTP_REMOTE_DIR || '/' }}
+      REMOTE_DIR: ${{ vars.SFTP_REMOTE_DIR || '/grodska.com' }}
     steps:
       - uses: actions/checkout@v4
 
