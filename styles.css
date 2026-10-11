@@ -238,7 +238,7 @@ a { color: inherit; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
 .footer-brand .logo { color: rgba(255,255,255,0.92); display: inline-block; margin-bottom: 14px; }
 .footer-brand p { font-size: 13px; line-height: 1.8; max-width: 22em; }
-.site-footer .fh { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; font-weight: 500; }
+.site-footer .fh { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 16px; font-weight: 500; }
 .site-footer a { display: block; font-size: 14px; color: rgba(255,255,255,0.72); text-decoration: none; margin-bottom: 9px; transition: color .2s; width: fit-content; }
 .site-footer a:hover { color: #fff; }
 .footer-bottom { border-top: 0.5px solid rgba(255,255,255,0.14); padding-top: 24px; font-size: 12px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
