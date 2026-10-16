@@ -85,7 +85,6 @@ a { color: inherit; }
 .btn-secondary:hover { border-color: var(--text); background: rgba(44,36,32,0.04); }
 .link-arrow { color: var(--accent-dd); text-decoration: none; border-bottom: 0.5px solid rgba(154,94,40,0.5); transition: color .2s, border-color .2s; }
 .link-arrow:hover { color: var(--text); border-color: var(--text); }
-.link-arrow::after { content: ' →'; }
 
 /* ── HERO (home) ── */
 .hero { min-height: 100vh; display: flex; align-items: center; padding: calc(var(--nav-h) + 40px) 0 72px; position: relative; }
