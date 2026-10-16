@@ -103,7 +103,7 @@ a { color: inherit; }
 .page-hero h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(42px, 6.4vw, 78px); line-height: 1.08; letter-spacing: -0.01em; max-width: 14em; }
 .page-hero h1 em { font-style: italic; color: var(--accent-d); }
 .page-hero .lede { font-family: var(--serif); font-size: clamp(21px, 2.3vw, 27px); line-height: 1.5; margin-top: 28px; max-width: 34em; font-weight: 400; }
-.page-hero .lede + .lede { margin-top: 18px; color: var(--muted); }
+.page-hero .lede + .lede { margin-top: 18px; }
 
 /* ── EDITORIAL SPLIT ── */
 .split { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 64px; padding: 56px 0; border-top: 0.5px solid var(--border); }
