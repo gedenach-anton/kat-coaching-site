@@ -119,9 +119,8 @@ a { color: inherit; }
 
 /* rule lists */
 .rules { list-style: none; max-width: 40em; }
-.rules li { padding: 6px 0; font-size: 17px; line-height: 1.7; }
-.rules li:first-child { padding-top: 0; }
-.rules li:last-child { padding-bottom: 0; }
+.rules li { padding: 0; margin-bottom: .6em; font-size: 17px; line-height: 1.85; }
+.rules li:last-child { margin-bottom: 0; }
 
 /* facts strip */
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
@@ -132,17 +131,16 @@ a { color: inherit; }
 
 /* match statements */
 .match { list-style: none; max-width: 40em; }
-.match li { padding: 6px 0; font-size: 17px; line-height: 1.7; }
-.match li:first-child { padding-top: 0; }
-.match li:last-child { padding-bottom: 0; }
+.match li { padding: 0; margin-bottom: .6em; font-size: 17px; line-height: 1.85; }
+.match li:last-child { margin-bottom: 0; }
 
 /* panel (format etc.) */
 .panel { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 8px 32px; max-width: 40em; }
 .panel dl { display: grid; grid-template-columns: 150px 1fr; }
-.panel dt, .panel dd { padding: 16px 0; border-bottom: 0.5px solid var(--border); font-size: 16px; line-height: 1.55; }
+.panel dt, .panel dd { padding: 16px 0; border-bottom: 0.5px solid var(--border); font-size: 17px; line-height: 1.55; }
 .panel dt { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-d); padding-top: 19px; font-weight: 500; }
 .panel dt:last-of-type, .panel dd:last-of-type { border-bottom: 0; }
-.panel-note { margin-top: 18px; font-size: 15px; color: var(--muted); max-width: 40em; }
+.panel-note { margin-top: 18px; font-size: 17px; line-height: 1.85; color: var(--muted); max-width: 40em; }
 
 /* steps (mediation) */
 .steps { list-style: none; counter-reset: s; max-width: 40em; }
@@ -151,7 +149,7 @@ a { color: inherit; }
 .steps li:last-child { padding-bottom: 0; border-bottom: 0; }
 .steps li::before { content: '0' counter(s); font-family: var(--serif); font-size: 30px; font-weight: 300; color: var(--accent); line-height: 1.1; }
 .steps h3 { font-family: var(--serif); font-weight: 500; font-size: 24px; line-height: 1.2; margin-bottom: 8px; }
-.steps p { font-size: 17px; line-height: 1.7; margin-bottom: .8em; }
+.steps p { font-size: 17px; line-height: 1.85; margin-bottom: 1.15em; }
 .steps p:last-child { margin-bottom: 0; }
 
 /* rows (home paths, workshop themes) */
