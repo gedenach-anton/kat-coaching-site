@@ -349,3 +349,4 @@ a { color: inherit; }
 }
 .rows + .split { border-top: 0; }
 @media (min-width: 861px) { .faq { margin-left: 364px; } }
+@media (min-width: 861px) { .faq-page .page-hero h1 { margin-left: 364px; } }
