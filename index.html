@@ -16,7 +16,7 @@
 <link rel="icon" href="images/favicon-64.png" sizes="64x64" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=13">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -92,12 +92,22 @@
   </div>
 </section>
 
-<section class="section tint">
-  <div class="container teaser reveal">
-    <p class="eyebrow">What clients say</p>
-    <blockquote>“Kateryna helped me reflect deeply and always asked the right questions, which guided me toward important insights. I found the sessions very valuable and supportive.”</blockquote>
-    <cite>Undina, coaching client</cite>
-    <p style="margin-top:28px"><a class="link-arrow" href="testimonials.html">Read more testimonials</a></p>
+<section class="section tint" aria-labelledby="tc-h">
+  <div class="container tc reveal">
+    <div class="tc-head">
+      <div><p class="eyebrow">Testimonials</p><h2 id="tc-h">What clients say</h2></div>
+      <div class="tc-nav" hidden>
+        <button class="tc-btn tc-prev" type="button" aria-label="Previous testimonials"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="tc-btn tc-next" type="button" aria-label="Next testimonials"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="tc-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
+      <figure class="tc-card" role="group" aria-roledescription="slide" aria-label="1 of 5"><svg class="doodle" viewBox="0 0 80 32" aria-hidden="true"><path d="M2 18 C14 4 22 4 30 16 S46 28 54 12 S68 6 76 14"/></svg><blockquote><p>“Kateryna helped me reflect deeply and always asked the right questions, which guided me toward important insights. I found the sessions very valuable and supportive.”</p></blockquote><figcaption><b>Undina</b><span class="role">Coaching client</span></figcaption></figure>
+      <figure class="tc-card" role="group" aria-roledescription="slide" aria-label="2 of 5"><svg class="doodle" viewBox="0 0 80 32" aria-hidden="true"><path d="M2 14 C10 26 20 26 26 14 S40 2 50 14 S66 24 76 10"/></svg><blockquote><p>“With Kateryna's help, I gained much clarity regarding my professional journey. She has a unique way of being empathetic, pragmatic and spot on, all at the same time.”</p></blockquote><figcaption><b>Linda</b><span class="role">Coaching client</span></figcaption></figure>
+      <figure class="tc-card" role="group" aria-roledescription="slide" aria-label="3 of 5"><svg class="doodle" viewBox="0 0 80 32" aria-hidden="true"><path d="M4 20 L20 6 L36 22 L52 8 L68 20"/></svg><blockquote><p>“She creates a supportive space while asking thoughtful questions that help bring clarity and uncover new perspectives. Her coaching helped me better understand my goals and approach challenges with greater confidence.”</p></blockquote><figcaption><b>Anna Martynenko</b><span class="role">Coaching client</span></figcaption></figure>
+      <figure class="tc-card" role="group" aria-roledescription="slide" aria-label="4 of 5"><svg class="doodle" viewBox="0 0 80 32" aria-hidden="true"><path d="M2 16 C16 16 16 4 30 4 S44 28 58 28 S70 12 76 12"/></svg><blockquote><p>“Kateryna created a format where you don't get ready-made answers. Instead, you're helped to find solutions yourself, drawing on your own experience and values.”</p></blockquote><figcaption><b>Alina H.</b><span class="role">Workshop participant</span></figcaption></figure>
+      <div class="tc-card tc-more" role="group" aria-roledescription="slide" aria-label="5 of 5"><h3>More voices from clients and workshop participants</h3><p>Eight stories, in their own words.</p><a href="testimonials.html">Read more testimonials</a></div>
+    </div>
   </div>
 </section>
 
@@ -145,6 +155,6 @@
     </div>
   </div>
 </footer>
-<script src="site.js?v=9"></script>
+<script src="site.js?v=10"></script>
 </body>
 </html>

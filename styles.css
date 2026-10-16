@@ -161,10 +161,33 @@ a { color: inherit; }
 .row .links { display: flex; gap: 28px; flex-wrap: wrap; font-size: 15px; margin-top: 8px; }
 .row-lg h3 { font-size: 34px; }
 
-/* testimonial teaser (home) */
-.teaser { text-align: left; }
-.teaser blockquote { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.4; max-width: 28em; }
-.teaser cite { display: block; margin-top: 22px; font-style: normal; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+/* testimonial carousel (home) */
+.tc { --gap: 24px; }
+.tc-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 36px; }
+.tc-head .eyebrow { margin-bottom: 14px; }
+.tc-head h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; }
+.tc-nav { display: flex; gap: 10px; flex: none; }
+.tc-nav[hidden] { display: none; }
+.js .tc-nav { display: flex; }
+.tc-btn { width: 46px; height: 46px; border-radius: 50%; border: 0.5px solid var(--muted); background: transparent; color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s, border-color .2s, color .2s; }
+.tc-btn:hover { background: var(--accent-d); border-color: var(--accent-d); color: var(--white); }
+.tc-btn[disabled] { opacity: .35; pointer-events: none; }
+.tc-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.tc-track { display: flex; gap: var(--gap); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; scroll-padding: 0 4px; padding: 4px 4px 8px; margin: 0 -4px; }
+.tc-track::-webkit-scrollbar { display: none; }
+.tc-card { flex: 0 0 calc((100% - 2 * var(--gap)) / 3); scroll-snap-align: start; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 30px 30px 28px; display: flex; flex-direction: column; min-height: 340px; }
+.tc-card:nth-child(even) { background: var(--cream); }
+.tc-card blockquote { font-family: var(--serif); font-size: 21px; line-height: 1.55; flex: 1; }
+.tc-card figcaption { margin-top: 24px; font-size: 14px; }
+.tc-card figcaption b { font-weight: 500; display: block; line-height: 1.3; }
+.tc-card .role { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.tc-card .doodle { width: 78px; height: 30px; margin-bottom: 18px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.tc-more { background: var(--text) !important; color: var(--white); justify-content: center; align-items: flex-start; gap: 18px; border-color: var(--text); }
+.tc-more h3 { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.2; }
+.tc-more p { font-size: 15px; color: rgba(255,255,255,.72); line-height: 1.7; }
+.tc-more a { display: inline-block; margin-top: 6px; padding: 13px 24px; background: var(--cream); color: var(--text); text-decoration: none; font-size: 13px; letter-spacing: .06em; font-weight: 500; border-radius: 1px; }
+.tc-more a:hover { background: #fff; }
+@media (max-width: 860px) { .tc-card { flex-basis: 84%; min-height: 0; } .tc-head { align-items: flex-start; } .tc-nav { display: none !important; } }
 
 /* testimonials page */
 .t-cols { columns: 2; column-gap: 28px; }
