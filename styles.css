@@ -191,11 +191,12 @@ a { color: inherit; }
 
 /* testimonials page */
 .t-cols { columns: 2; column-gap: 28px; }
-.t-card { break-inside: avoid; background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 40px 36px 32px; margin-bottom: 28px; position: relative; }
-.t-card::before { content: '\201C'; position: absolute; top: 10px; left: 26px; font-family: var(--serif); font-size: 64px; line-height: 1; color: var(--accent); opacity: .6; }
+.t-card { break-inside: avoid; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 30px 32px 28px; margin-bottom: 28px; position: relative; }
+.t-cols .t-card:nth-child(even) { background: var(--cream-2); }
+.t-card .doodle { width: 78px; height: 30px; margin-bottom: 18px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; display: block; }
 .t-card blockquote p { font-family: var(--serif); font-size: 20px; line-height: 1.6; margin-bottom: .9em; }
 .t-card blockquote p:last-child { margin-bottom: 0; }
-.t-card footer { margin-top: 24px; padding-top: 18px; border-top: 0.5px solid var(--border); background: none; padding-bottom: 0; color: var(--text); font-size: 14px; }
+.t-card footer { margin-top: 24px; padding-top: 0; border-top: 0; background: none; padding-bottom: 0; color: var(--text); font-size: 14px; }
 .t-card footer b { font-weight: 500; display: block; }
 .t-card footer span { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
@@ -301,7 +302,7 @@ a { color: inherit; }
 @media (max-width: 520px) {
   .container, .nav-inner { padding-left: 20px; padding-right: 20px; }
   .btn { width: 100%; text-align: center; }
-  .t-card { padding: 38px 24px 26px; }
+  .t-card { padding: 28px 24px 26px; }
   .legal-card { padding: 28px 22px; }
   .legal-wrap h1 { font-size: 40px; }
   .legal-en h1 { font-size: 32px; }
