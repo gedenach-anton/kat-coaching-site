@@ -154,12 +154,12 @@ a { color: inherit; }
 /* rows (home paths, workshop themes) */
 .rows { border-top: 0.5px solid var(--border); }
 .row { display: grid; grid-template-columns: 260px 1fr; gap: 48px; padding: 34px 0; border-bottom: 0.5px solid var(--border); align-items: baseline; transition: background .25s; }
-.row h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.15; }
+.row h2 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.15; }
 .row .topics { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-d); margin-bottom: 12px; font-weight: 500; line-height: 1.7; }
 .row p { font-size: 17px; line-height: 1.8; max-width: 38em; margin-bottom: .7em; }
 .row p:last-child { margin-bottom: 0; }
 .row .links { display: flex; gap: 28px; flex-wrap: wrap; font-size: 15px; margin-top: 8px; }
-.row-lg h3 { font-size: 34px; }
+.row-lg h2 { font-size: 34px; }
 
 /* testimonial carousel (home) */
 .tc { --gap: 24px; }
