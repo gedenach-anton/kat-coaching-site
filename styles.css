@@ -334,3 +334,8 @@ a { color: inherit; }
 .legal-card.policy ul { padding-left: 20px; margin-bottom: 14px; }
 .legal-card.policy li { font-size: 15px; line-height: 1.8; margin-bottom: 6px; }
 @media (max-width: 640px) { .policy-toc ol { columns: 1; } .legal-card.policy h2 { font-size: 23px; } .policy-note { margin-top: -16px; } }
+
+/* tinted section directly followed by the CTA band: they share a background, so don't stack both paddings */
+.section.tint:has(+ .cta-band) { padding-bottom: 32px; }
+.section.tint + .cta-band { border-top: 0; padding-top: 48px; }
+@media (max-width: 860px) { .section.tint + .cta-band { padding-top: 40px; } }
