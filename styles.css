@@ -257,8 +257,9 @@ a { color: inherit; }
   .section { padding: 64px 0; }
   .hero { min-height: 0; padding-top: calc(var(--nav-h) + 32px); }
   .hero-grid { grid-template-columns: 1fr; gap: 44px; }
-  .photo-wrap { order: -1; max-width: 300px; }
-  .photo-tag { left: auto; right: -10px; }
+  .photo-wrap { order: -1; max-width: none; }
+  .photo-frame { padding-bottom: 100%; }
+  .photo-tag { left: auto; right: 0; }
   .split { grid-template-columns: 1fr; gap: 20px; padding: 44px 0; }
   .facts { grid-template-columns: 1fr 1fr; }
   .fact:nth-child(3) { padding-left: 0; border-left: 0; }
