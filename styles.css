@@ -119,9 +119,9 @@ a { color: inherit; }
 
 /* rule lists */
 .rules { list-style: none; max-width: 40em; }
-.rules li { padding: 16px 0; border-bottom: 0.5px solid var(--border); font-size: 17px; line-height: 1.7; }
+.rules li { padding: 6px 0; font-size: 17px; line-height: 1.7; }
 .rules li:first-child { padding-top: 0; }
-.rules li:last-child { padding-bottom: 0; border-bottom: 0; }
+.rules li:last-child { padding-bottom: 0; }
 
 /* facts strip */
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
@@ -132,9 +132,9 @@ a { color: inherit; }
 
 /* match statements */
 .match { list-style: none; max-width: 40em; }
-.match li { padding: 16px 0; border-bottom: 0.5px solid var(--border); font-size: 17px; line-height: 1.7; }
+.match li { padding: 6px 0; font-size: 17px; line-height: 1.7; }
 .match li:first-child { padding-top: 0; }
-.match li:last-child { padding-bottom: 0; border-bottom: 0; }
+.match li:last-child { padding-bottom: 0; }
 
 /* panel (format etc.) */
 .panel { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 8px 32px; max-width: 40em; }
