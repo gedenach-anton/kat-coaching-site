@@ -228,7 +228,7 @@ a { color: inherit; }
 
 /* contact */
 .book-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-.book-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 36px 34px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.book-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 36px 34px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .book-card h2 { font-family: var(--serif); font-weight: 400; font-size: 28px; line-height: 1.2; }
 .book-card p { font-size: 16px; line-height: 1.75; flex: 1; }
 .form { max-width: 640px; }
@@ -339,3 +339,13 @@ a { color: inherit; }
 .section.tint:has(+ .cta-band) { padding-bottom: 32px; }
 .section.tint + .cta-band { border-top: 0; padding-top: 48px; }
 @media (max-width: 860px) { .section.tint + .cta-band { padding-top: 40px; } }
+
+/* Harmonised CTA buttons: equal size, one filled + one outlined per group */
+.book-card .btn { width: 216px; padding-left: 12px; padding-right: 12px; text-align: center; }
+.cta-band .btn-group { display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; }
+.cta-band .btn { text-align: center; }
+@media (max-width: 560px) {
+  .book-card .btn-group { width: 100%; flex-direction: column; }
+  .book-card .btn { width: 100%; }
+  .cta-band .btn-group { display: flex; flex-direction: column; width: 100%; }
+}
