@@ -113,6 +113,7 @@ a { color: inherit; }
 .prose p:last-child { margin-bottom: 0; }
 .prose h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; margin: 1.6em 0 .5em; }
 .prose p.soft { color: var(--muted); }
+.prose p.pull { font-size: clamp(24px, 3vw, 32px); line-height: 1.4; margin: 1.6em 0 0; max-width: 24em; }
 .pull { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(24px, 3vw, 32px); line-height: 1.4; color: var(--accent-dd); padding-left: 26px; border-left: 1.5px solid var(--accent); margin: 1.6em 0; max-width: 24em; }
 .aside-note { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.6; color: var(--muted); max-width: 34em; margin-top: 1.4em; }
 
