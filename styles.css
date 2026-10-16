@@ -119,8 +119,9 @@ a { color: inherit; }
 
 /* rule lists */
 .rules { list-style: none; max-width: 40em; }
-.rules li { padding: 14px 0; border-bottom: 0.5px solid var(--border); font-size: 17px; line-height: 1.6; }
-.rules li:first-child { border-top: 0.5px solid var(--border); }
+.rules li { padding: 16px 0; border-bottom: 0.5px solid var(--border); font-size: 17px; line-height: 1.7; }
+.rules li:first-child { padding-top: 0; }
+.rules li:last-child { padding-bottom: 0; border-bottom: 0; }
 
 /* facts strip */
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
@@ -130,13 +131,13 @@ a { color: inherit; }
 .fact span { font-size: 13px; color: var(--muted); line-height: 1.5; display: block; }
 
 /* match statements */
-.match { list-style: none; counter-reset: m; max-width: 44em; }
-.match li { counter-increment: m; display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding: 20px 0; border-bottom: 0.5px solid var(--border); font-family: var(--serif); font-size: 24px; line-height: 1.4; }
-.match li:first-child { border-top: 0.5px solid var(--border); }
-.match li::before { content: '0' counter(m); font-size: 14px; color: var(--accent-d); letter-spacing: .1em; padding-top: 8px; font-family: var(--sans); }
+.match { list-style: none; max-width: 40em; }
+.match li { padding: 16px 0; border-bottom: 0.5px solid var(--border); font-size: 17px; line-height: 1.7; }
+.match li:first-child { padding-top: 0; }
+.match li:last-child { padding-bottom: 0; border-bottom: 0; }
 
 /* panel (format etc.) */
-.panel { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 8px 32px; max-width: 44em; }
+.panel { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 8px 32px; max-width: 40em; }
 .panel dl { display: grid; grid-template-columns: 150px 1fr; }
 .panel dt, .panel dd { padding: 16px 0; border-bottom: 0.5px solid var(--border); font-size: 16px; line-height: 1.55; }
 .panel dt { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-d); padding-top: 19px; font-weight: 500; }
@@ -298,7 +299,6 @@ a { color: inherit; }
   .panel { padding: 4px 22px; }
   .panel dl { grid-template-columns: 1fr; }
   .panel dt { border-bottom: 0; padding-bottom: 0; }
-  .match li { font-size: 21px; }
 }
 @media (max-width: 520px) {
   .container, .nav-inner { padding-left: 20px; padding-right: 20px; }
