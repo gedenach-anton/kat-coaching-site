@@ -349,3 +349,5 @@ a { color: inherit; }
   .book-card .btn { width: 100%; }
   .cta-band .btn-group { display: flex; flex-direction: column; width: 100%; }
 }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (min-width: 861px) { .split > h2.sr-only + .prose { grid-column: 2; } }
