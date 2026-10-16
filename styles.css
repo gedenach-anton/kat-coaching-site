@@ -68,7 +68,7 @@ a { color: inherit; }
 .nav-links a { font-size: 13px; letter-spacing: 0.03em; color: var(--muted); text-decoration: none; transition: color .2s; padding: 6px 0; border-bottom: 1px solid transparent; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a[aria-current="page"] { color: var(--text); border-bottom-color: var(--accent); }
-.nav-links a.nav-cta { color: var(--accent-dd); border: 0.5px solid var(--accent-d); padding: 8px 16px; border-radius: 1px; font-size: 12px; letter-spacing: 0.06em; transition: background .2s, color .2s; }
+.nav-links a.nav-cta { color: var(--accent-dd); border: 0.5px solid var(--accent-d); padding: 8px 16px; border-radius: 6px; font-size: 12px; letter-spacing: 0.06em; transition: background .2s, color .2s; }
 .nav-links a.nav-cta:hover { background: var(--accent-d); color: var(--white); }
 .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 10px; margin-right: -10px; }
 .nav-toggle span { display: block; width: 22px; height: 1px; background: var(--text); margin: 6px 0; transition: transform .3s, opacity .2s; }
@@ -78,7 +78,7 @@ a { color: inherit; }
 
 /* ── BUTTONS ── */
 .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn { display: inline-block; padding: 14px 26px; font-size: 13px; letter-spacing: 0.06em; text-decoration: none; border-radius: 1px; border: 0.5px solid transparent; cursor: pointer; font-family: var(--sans); font-weight: 500; transition: background .2s, border-color .2s, color .2s; }
+.btn { display: inline-block; padding: 14px 26px; font-size: 13px; letter-spacing: 0.06em; text-decoration: none; border-radius: 6px; border: 0.5px solid transparent; cursor: pointer; font-family: var(--sans); font-weight: 500; transition: background .2s, border-color .2s, color .2s; }
 .btn-primary { background: var(--accent-d); color: var(--white); }
 .btn-primary:hover { background: var(--accent-dd); }
 .btn-secondary { border-color: var(--muted); color: var(--text); background: transparent; }
@@ -186,7 +186,7 @@ a { color: inherit; }
 .tc-more { background: var(--text) !important; color: var(--white); justify-content: center; align-items: flex-start; gap: 18px; border-color: var(--text); }
 .tc-more h3 { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.2; }
 .tc-more p { font-size: 15px; color: rgba(255,255,255,.72); line-height: 1.7; }
-.tc-more a { display: inline-block; margin-top: 6px; padding: 13px 24px; background: var(--cream); color: var(--text); text-decoration: none; font-size: 13px; letter-spacing: .06em; font-weight: 500; border-radius: 1px; }
+.tc-more a { display: inline-block; margin-top: 6px; padding: 13px 24px; background: var(--cream); color: var(--text); text-decoration: none; font-size: 13px; letter-spacing: .06em; font-weight: 500; border-radius: 6px; }
 .tc-more a:hover { background: #fff; }
 @media (max-width: 860px) { .tc-card { flex-basis: 84%; min-height: 0; } .tc-head { align-items: flex-start; } .tc-nav { display: none !important; } }
 
