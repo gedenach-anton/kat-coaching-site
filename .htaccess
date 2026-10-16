@@ -16,4 +16,6 @@ ErrorDocument 404 /404.html
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set X-Frame-Options "SAMEORIGIN"
+  # HSTS: browsers use https only. One week for now; raise to 31536000 (1 year) after the SSL certificate renewal in March 2027 is confirmed.
+  Header set Strict-Transport-Security "max-age=604800"
 </IfModule>
